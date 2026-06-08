@@ -6,7 +6,7 @@ public class BankingApplication {
 
         double balance = 10000;
 
-        balance = deposit(balance,5000);
+        balance = deposit(balance,10000);
 
         balance = withdraw(balance,2000);
 
