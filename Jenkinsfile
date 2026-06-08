@@ -10,7 +10,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/yourrepo/banking-app.git'
+                git 'https://github.com/yourrepo/Banking-app.git'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
-                sh 'docker build -t banking-app:v1 .'
+                sh 'docker build -t Banking-app:v1 .'
             }
         }
 
@@ -33,7 +33,7 @@ pipeline {
                 docker rm -f banking-app || true
 
                 docker run -d \
-                --name banking-app \
+                --name Banking-app \
                 banking-app:v1
                 '''
             }
